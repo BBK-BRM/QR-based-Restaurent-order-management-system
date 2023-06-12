@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+main{
+    background: linear-gradient(rgba(0, 0, 0, 0.454),rgba(128, 128, 128, 0.501)), url(../images/bg.webp);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-desc h1{
+    color: orange;
+    word-spacing: 4px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.login-form{
+    width: 350px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: #dfdede;
+    box-shadow: 7px 10px 8px #111;
+}
+.login-form h2{
+    padding: 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid #111;
+}
+
+.login-form p{
+    padding: 0.5rem;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+form p{
+    background-color: rgba(219, 98, 98, 0.808);
+    color: rgb(133, 10, 10);
+    border: 1px solid red;
+    border-radius: 7px;
+    padding: 0.5rem;
+}
+
+form input{
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 1rem;
+}
+
+form button{
+    padding: 9px;
+    border: none;
+    background-color: orange;
+    color: #333;
+    font-size: 1rem;
+    border-radius: 7px;
+}
+
+form button:hover{
+    color: #222;
+    background-color: rgb(251, 195, 90);
+}
+
+@media screen and (min-width:1024) {
+    .login-form{
+        width: 40%;
+    }
+
+    .login-form h2{
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media screen and (max-width:430px) {
+    .login-form{
+        width: 300px;
+    }
+}
