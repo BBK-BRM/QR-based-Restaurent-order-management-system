@@ -26,7 +26,7 @@ main{
     text-align: center;
 }
 
-.login-form{
+.form-container{
     width: 350px;
     margin: 0 auto;
     border: 1px solid black;
@@ -34,13 +34,14 @@ main{
     background-color: #dfdede;
     box-shadow: 7px 10px 8px #111;
 }
-.login-form h2{
+.form-container h3{
     padding: 0.5rem;
     text-align: center;
+    font-size: 1.3rem;
     border-bottom: 1px solid #111;
 }
 
-.login-form p{
+.form-container p{
     padding: 0.5rem;
     text-align: center;
 }
@@ -52,12 +53,13 @@ form{
     padding: 1rem;
 }
 
-form p{
+#error{
     background-color: rgba(219, 98, 98, 0.808);
     color: rgb(133, 10, 10);
     border: 1px solid red;
     border-radius: 7px;
     padding: 0.5rem;
+    text-align: center;
 }
 
 form input{
@@ -81,19 +83,13 @@ form button:hover{
     background-color: rgb(251, 195, 90);
 }
 
-@media screen and (min-width:1024) {
-    .login-form{
-        width: 40%;
-    }
-
-    .login-form h2{
-        font-size: 1.5rem;
-    }
-    
-}
-
 @media screen and (max-width:430px) {
-    .login-form{
+    .form-container{
         width: 300px;
+    }
+}
+@media screen and (min-width:1336px) {
+    .form-container{
+        width: 380px;
     }
 }

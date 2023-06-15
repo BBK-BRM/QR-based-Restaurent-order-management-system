@@ -45,7 +45,8 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['signup'])){
                         $hashed_pass = password_hash($password,PASSWORD_DEFAULT);
                         mysqli_stmt_bind_param($stmt,'ssis',$email,$username,$phone,$hashed_pass);
                         if(mysqli_stmt_execute($stmt)){
-                            redirect('/project-i/login.php');
+                            header('refresh:3;url=/project-i/login.php');
+                            // redirect('/project-i/login.php');
                         }
                         else{
                             echo mysqli_stmt_error($stmt);
@@ -60,9 +61,18 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['signup'])){
     }
 }
 ?>
-<?php require 'includes/header.php'; ?>
-<?php echo '<link href="css/signup.css" rel="stylesheet" />'; ?>
-<div class="signup-form">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login-signup.css">
+</head>
+<body>
+    <main>
+<div class="form-container">
     <h3>signup form</h3>
     <form method="post">
         <label for="email">Email</label>
@@ -87,5 +97,6 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['signup'])){
         <button id='signup' name="signup">sign up</button>
     </form>
 </div>
-
-<?php 'require/footer.php'; ?>
+</main>
+</body>
+</html>
