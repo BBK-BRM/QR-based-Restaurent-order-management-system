@@ -42,10 +42,6 @@ form input{
   -webkit-appearance: none;
 }
 
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 #btn-container{
     display: flex ;
     gap: 2rem;
