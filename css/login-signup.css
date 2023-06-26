@@ -9,7 +9,7 @@ body{
 }
 
 main{
-    background: linear-gradient(rgba(0, 0, 0, 0.454),rgba(128, 128, 128, 0.501)), url(../images/bg.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.592),rgba(25, 22, 22, 0.501)), url(../images/bg.webp);
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -31,8 +31,8 @@ main{
     margin: 0 auto;
     border: 1px solid black;
     border-radius: 7px;
-    background-color: #dfdede;
-    box-shadow: 7px 10px 8px #111;
+    background-color: #d2d2d2;
+    box-shadow: 7px 10px 8px #1113;
 }
 .form-container h3{
     padding: 0.5rem;
@@ -69,18 +69,42 @@ form input{
     font-size: 1rem;
 }
 
+.btn-container{
+    align-self: center;
+}
+
+.btn-container a{
+    text-decoration: none;
+    color: #fff;
+}
+
 form button{
-    padding: 9px;
+    padding: 0.7rem;
+    width: 5rem;
+    margin: 0 auto;
     border: none;
-    background-color: orange;
+    background-color: rgb(255, 196, 87);
     color: #333;
     font-size: 1rem;
     border-radius: 7px;
+    cursor: pointer;
 }
 
 form button:hover{
     color: #222;
-    background-color: rgb(251, 195, 90);
+    background-color: rgb(255, 167, 3);
+}
+
+#cancel-btn{
+    background-color:#1115 ;
+    border: 1px solid#333;
+}
+
+#cancel-btn:hover,
+#cancel-btn a:hover{
+    background-color:#333 ;
+    border: 1px solid#333;
+    color: #fff;
 }
 
 @media screen and (max-width:430px) {

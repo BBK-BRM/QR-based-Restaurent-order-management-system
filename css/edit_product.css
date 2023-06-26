@@ -1,0 +1,82 @@
+main{
+    display: flex;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center ;
+    width: 100vw;
+    background: rgba(207, 194, 169, 0.1) ;
+}
+
+form{
+    background: rgba(18, 18, 18, 0.15);
+    height: fit-content ;
+    margin: 1rem;
+    border-radius: 7px;
+}
+
+form h3{
+    text-align: center ;
+    margin: 1rem;
+}
+
+form div{
+    margin: 1.5rem;
+}
+
+form div label{
+    width: 6rem;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+form input{
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 1rem;
+}
+
+#product_price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#btn-container{
+    display: flex ;
+    gap: 2rem;
+    justify-content: center ;
+    
+}
+
+#btn-container a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.btn{
+    padding: 9px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 7px;
+    background: #fff;
+    cursor: pointer ;
+}
+
+.add{
+    color: orange;
+    background: #444;
+}
+
+.add:hover{
+    background: #111;
+}
+
+.cancel:hover{
+    background: #aaa;
+}

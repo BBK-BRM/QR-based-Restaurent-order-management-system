@@ -93,8 +93,10 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['signup'])){
         <?php if(!empty($error)): ?>
             <p id="error"><?= $error ?></p>
         <?php endif; ?>
-       
-        <button id='signup' name="signup">sign up</button>
+       <div class="btn-container">
+           <button id="signup" name="signup">Signup</button>
+           <button id="cancel-btn"><a href="login.php">Cancel</a></button>
+       </div>
     </form>
 </div>
 </main>

@@ -36,6 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
             echo mysqli_error($conn);
         }
     }
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
 }
 ?>
 <!DOCTYPE html>
