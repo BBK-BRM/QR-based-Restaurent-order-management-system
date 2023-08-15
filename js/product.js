@@ -1,5 +1,3 @@
-
-
 //search items
 const searchInput = document.getElementById('search_box');
 const tableRows = document.querySelectorAll('table tbody tr');

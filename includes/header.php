@@ -19,9 +19,9 @@
                     <img src="images/nav_logo.png" id="logo-nav" alt="O M S">
                 </a>
                 <ul id="nav-links">
-                    <li><a href="dashboard.php" class="link"><i class="material-icons">dashboard</i><span>Dashboard</span></a></li>
-                    <li><a href="product.php" class="link"><i class="material-icons">category</i><span>Product</span></a></li>
-                    <li><a href="order.php" class="link"><i class="material-icons">inventory</i><span>Order</span></a></li>
+                    <li class="nav-item"><a href="dashboard.php" class="link"><i class="material-icons">dashboard</i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a href="product.php" class="link"><i class="material-icons">category</i><span>Product</span></a></li>
+                    <li class="nav-item"><a href="order.php" class="link"><i class="material-icons">inventory</i><span>Order</span></a></li>
                 </ul>
             </nav>
             <div>
@@ -30,8 +30,8 @@
                     <?= $_SESSION['username'] ?>
                 </p>
                 <div id="dropdown" class="dropdown-content">
-                    <a href="#" class="link">Account</a>
-                    <a href="logout.php" class="link">logout</a>
+                    <a href="#" >Account</a>
+                    <a href="logout.php" >logout</a>
                 </div>
                 <!-- <button id="logout_btn"><a href="logout.php">Logout</a></button> -->
             </div>

@@ -45,7 +45,7 @@ $result = mysqli_query($conn, $sql);
                             </td>
 
                             <td class="product_image">
-                                <img src="images/<?= $product['image']; ?>" alt="image">
+                                <img src="uploads/<?= $product['image']; ?>" alt="image" width="5rem">
                             </td>
 
                             <td class="discription">

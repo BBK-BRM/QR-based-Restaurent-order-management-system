@@ -1,0 +1,29 @@
+.main-content{
+    width: 100vw;
+    margin: 0 auto;
+    margin-left:180px; 
+}
+
+.dashbord{
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem;
+}
+
+.dashbord div{
+    height: 90px;
+    width: 250px;
+    background: #eee;
+    padding: 1rem;
+    text-align: center ;
+    border: 1px solid #111;
+    border-radius: 7px;
+    
+}
+
+@media screen and (max-width:800px) {
+    .main-content{
+        margin: 0 auto;
+        margin-left: 70px;
+    }
+}

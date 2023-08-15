@@ -7,5 +7,18 @@ if(!isset($_SESSION["is_logged_in"])){
 ?>
 
 <?php require 'includes/header.php'; ?>
+<link rel="stylesheet" href="css/dashbord.css">
+<section class="main-content">
+    <section class="dashbord">
+        <div>
+            <h3>Total orders</h3>
+            <p>1</p>
+        </div>
+        <div>
+            <h3>Total Sales</h3>
+            <p>200</p>
+        </div>
+    </section>
+</section>
 
 <?php require 'includes/footer.php'; ?>

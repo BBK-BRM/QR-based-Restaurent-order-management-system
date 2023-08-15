@@ -26,6 +26,7 @@ header {
     width: 180px;
     height: 100vh;
     background: #222;
+    position: fixed;
 }
 
 #logo-nav {
@@ -57,11 +58,19 @@ nav ul li a:hover,
 #user {
     color: #fff;
     text-align: center;
-    padding: 1rem;
-    /* margin-bottom: 12px; */
+    padding: 0.5rem;
+    margin-bottom: 12px;
     position: relative;
     cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 18px;
 }
+
+#user:hover{
+    color: orange;
+    background-color: #444;
+}
+
 
 /* #logout_btn {
     background: white;
@@ -88,8 +97,8 @@ nav ul li a:hover,
 .dropdown-content {
     display: none;
     position: absolute;
-    left: 18%;
-    bottom: 0;
+    left: 180px;
+    bottom: 5px;
     background-color: #111;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -106,6 +115,7 @@ nav ul li a:hover,
 
 .dropdown-content a:hover {
     background-color: #444;
+    color: orange;
 }
 
 .show {
@@ -132,8 +142,12 @@ nav ul li a:hover,
     header {
         width: 60px;
     }
-
-    #logout_btn {
+    
+    /* #logout_btn {
         display: none;
+    } */
+    .dropdown-content{
+    left: 61px;
+    bottom: 1px;
     }
 }

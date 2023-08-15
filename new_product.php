@@ -18,11 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['add_product'])) {
 
     $product_image = $_FILES['product_image']['name'];
     $tempname = $_FILES["product_image"]["tmp_name"];  
-    $folder =$_SERVER['HTTP_HOST']."/project-i/images/".$filename;  
-
+    $folder ="uploads/".basename($product_image);
+    
     $product_category = filter_input(INPUT_POST, 'category', FILTER_SANITIZE_STRING);
-
-
 
     $sql = "INSERT INTO product(name,price,description,category,image) VALUES (?,?,?,?,?)";
     $stmt = mysqli_prepare($conn, $sql);
@@ -33,8 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['add_product'])) {
         mysqli_stmt_bind_param($stmt, "sisss", $product_name, $product_price, $product_description,$product_category,$product_image);
 
         if (mysqli_stmt_execute($stmt)) {
-            move_uploaded_file($tempname,$folder);
-            redirect("/project-i/product.php");
+            if(move_uploaded_file($tempname,$folder)){
+                redirect("/project-i/product.php");
+            }
+            else{
+                echo "Unable to upload.";
+            }
         } else {
             echo mysqli_stmt_error($stmt);
         }

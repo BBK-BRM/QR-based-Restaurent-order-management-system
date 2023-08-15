@@ -14,7 +14,8 @@ if(isset($_GET['id'])){
 }
 
 if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['delete'])){
-    $sql="DELETE FROM articles WHERE id=?";
+    $conn = getDB();
+    $sql="DELETE FROM product WHERE id=?";
     $stmt=mysqli_prepare($conn,$sql);
 
     if($stmt===false){
@@ -43,7 +44,7 @@ if(isset($_POST['cancel'])){
         <p>Are you sure?</p>
         <div class="btn-container">
             <button name="delete" class="btn delete">Delete</button>
-            <button name="cancel"class="btn cancel">Cancel</button>
+            <button  type="button" name="cancel"class="btn cancel">Cancel</button>
         </div>
     </form>
     <?php require 'includes/footer.php';?>

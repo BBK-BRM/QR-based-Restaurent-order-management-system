@@ -32,11 +32,15 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['save_product'])){
     $product_name = $_POST['product_name'];
     $product_description = $_POST['product_description'];
     $product_price = $_POST['product_price'];
-    $product_category = $_POST['product_category'];
-    $product_image = $_POST['product_image'];
+    
+    $product_category = filter_input(INPUT_POST, 'category', FILTER_SANITIZE_STRING);
+
+    $product_image = $_FILES['product_image']['name'];
+    $tempname = $_FILES["product_image"]["tmp_name"];  
+    $folder ="uploads/".basename($product_image);
 
     if(empty($errors)){
-        $sql="UPDATE articles SET name=?,price=?,description=?,category=?,image=? WHERE id=?";
+        $sql="UPDATE product SET name=?,price=?,description=?,category=?,image=? WHERE id=?";
         $stmt=mysqli_prepare($conn,$sql);
 
         if($stmt===false){
@@ -44,7 +48,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['save_product'])){
         }else{
             mysqli_stmt_bind_param($stmt, "sisssi", $product_name, $product_price, $product_description,$product_category,$product_image,$id);
             if(mysqli_stmt_execute($stmt)){
-                redirect("/project-i/product.php");
+                if(move_uploaded_file($tempname,$folder)){
+                    redirect("/project-i/product.php");
+                }
+                else{
+                    echo "Unable to upload.";
+                } 
             }
             else{
                 echo mysqli_stmt_error($stmt);
