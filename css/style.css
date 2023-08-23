@@ -1,7 +1,7 @@
 .main-content{
     width: 100vw;
     margin: 0 auto;
-    margin-left:200px; 
+    /* margin-left:200px;  */
 }
 
 #search{
@@ -18,31 +18,40 @@
 
 #products{
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: start;
     gap: 1rem;
 }
-
+.container{
+    display: flex;
+}
 .product{
-    width:230px;
-    background-color: #555;
-    border: 1px solid black;
+    width: 230px;
+    background-color: #e0dbdb9b;
+    border: 2px solid black;
     border-radius: 7px;
 }
 
 .product img{
-    width: 14.29rem;
-    height: 9rem;
+    width: 14.37rem;
+    height: 10rem;
     border-radius:7px 7px 0px 0px ;
 }
-
+.description h3{
+    margin-top: 0px;
+}
+.description p{
+    margin-top: -13px;
+}
 .description{
     padding-left: 1rem;
-    color: orange;
+    color: rgb(9, 9, 9);
+    font-weight: 600;
+    font-size: 21px;
 }
 
 .product-name{
-    margin: 10px 0px;
+    /* margin: 10px 0px; */
     color: orange;
     letter-spacing: 1px;
 }

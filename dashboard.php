@@ -18,7 +18,12 @@ if(!isset($_SESSION["is_logged_in"])){
             <h3>Total Sales</h3>
             <p>200</p>
         </div>
+        <div>
+            <h3>Total Revenue</h3>
+            <p>200</p>
+            </div>
+        <br>
     </section>
+    <img src="chart.png" alt="" class="image">
 </section>
-
 <?php require 'includes/footer.php'; ?>

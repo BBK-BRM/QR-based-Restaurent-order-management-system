@@ -1,8 +1,8 @@
 <?php
 function getDB(){
     $db_host = "localhost";
-    $db_user = "admin";
-    $db_pass = "DK-E!qvDmItrSdvP";
+    $db_user = "root";
+    $db_pass = "";
     $db_name = "Order_management";
     
     $conn = mysqli_connect($db_host,$db_user,$db_pass,$db_name);
